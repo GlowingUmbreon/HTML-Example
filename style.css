@@ -1,0 +1,166 @@
+:root {
+  --background-color: #282a36;
+  --current-line-color: #44475a;
+  --foreground-color: #f8f8f2;
+  --comment-color: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+}
+
+/* Main */
+body {
+  background-color: var(--background-color);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label {
+  text-align: center;
+  color: var(--foreground-color);
+}
+
+a {
+  color: var(--purple);
+}
+
+@keyframes animate {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.centerImage {
+  display: blo
+
+  ck;
+  margin: auto;
+}
+
+.imageCollection {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 10%;
+}
+
+.imageCollectionChild {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation-duration: 1s;
+}
+
+.imageCollectionChild img {
+  display: block;
+  height: 100%;
+}
+
+/* Quick */
+.rundown {
+  margin: auto;
+  background: rgb(149, 128, 255, 0.1);
+  width: 80vw;
+  padding: 10px 0px 10px 0px;
+  border-radius: 0.5rem;
+}
+.rundownSection {
+  padding: 0px 10px 0px 10px;
+}
+@media screen and (min-width: 450px) {
+  /* Make sure they are only side by side when the screen is big enough. */
+  .rundownSection {
+    width: 40vw; /* rundown width/2 */
+    display: table-cell;
+  }
+}
+
+#topNav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  background-color: var(--background-color);
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+  width: 100%;
+  overflow: hidden;
+}
+
+#topNav img {
+  float: left;
+  height: 32px;
+  width: 32px;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+#topNav a {
+  transition: all .3s linear;
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  height: 16px;
+  border: none;
+  display: block;
+  outline: 0;
+
+  color: var(--foreground-color);
+  text-decoration:none;
+  border-bottom: 2px solid transparent;
+}
+
+#topNav a:hover {
+  /*background-color: var(--current-line-color);*/
+  color: var(--purple);
+  border-color: var(--purple)
+}
+
+li {
+  /*display: inline-block;*/
+  color: var(--foreground-color);
+}
+
+.articleLink {
+  position: relative;
+  text-align: center;
+  color: var(--foreground-color);
+}
+
+@media screen and (min-width: 450px) {
+  .articles {
+    display: grid;
+  }
+
+  .articleLink img {
+    max-height: 50vh;
+  }
+}
+.articleLink img {
+  max-width: 90vw;
+  opacity: 0.5;
+  border: 1px solid #808080;
+}
+
+.middleText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
